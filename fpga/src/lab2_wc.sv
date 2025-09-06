@@ -13,6 +13,7 @@ module lab2_wc(//input logic clk, reset //TODO: is reset necessary?
 				logic select; //0 for display 0, 1 for display 1
 				logic [3:0] switch; // Selected switch data
 				logic int_osc; // internal clock
+                logic [19:0] counter;
 			
 				//Create clock 
 				// Internal high-speed oscillator
@@ -21,10 +22,12 @@ module lab2_wc(//input logic clk, reset //TODO: is reset necessary?
 
 				// Counter
 				always_ff @(posedge int_osc) begin  
-					counter <= counter + 33'd859; //operates at 2.4Hz
+					counter <= counter + 19'd2; //operates at ~91.5Hz
 				end
+                // Google AI says the human eye can detect up to 80Hz of flickering so started there
 				// Select is based on the clock, i think
 				//TODO: select from strobe using counter?
+                assign select = counter[19];
 				
 				
 				// Select input

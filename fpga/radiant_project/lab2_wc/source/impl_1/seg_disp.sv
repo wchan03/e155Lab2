@@ -27,7 +27,7 @@ module seg_disp(input logic [3:0] s,
 			4'b1101: seg_intm <= 7'b1011110; //D 
 			4'b1110: seg_intm <= 7'b1111001; //E 
 			4'b1111: seg_intm <= 7'b1110001; //F 
-			default: seg_intm <= 7'b1111111; 
+			default: seg_intm <= 7'b1111111;
 		endcase 
 		
 		seg <= ~seg_intm; // Flip all bits to pull segments DOWN to turn them on 

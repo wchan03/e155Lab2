@@ -29,7 +29,8 @@ module seg_disp_testbench();
 	//apply test vectors at rising of clock
 	always @(posedge clk)
 		begin
-			#1; {s, expected} = testvectors[vectornum - 1]; // check previous output
+			 {s, expected} = testvectors[vectornum];
+			 #1; //TODO maybe change this
 		end
 		
 	//check results on falling edge of clock
