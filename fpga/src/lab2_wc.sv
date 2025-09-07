@@ -2,7 +2,6 @@
 // wchan@g.hmc.edu
 // Sept. 4, 2025
 // Top Level Module for Lab 2: Mutiplexed 7-Seg Display
-// This module TODO: FINISH THIS
 
 module lab2_wc( input logic [3:0] switch1, 
 				input logic [3:0] switch2, // Two DIP switches
@@ -41,6 +40,5 @@ module lab2_wc( input logic [3:0] switch1,
 				
 				// LEDs calculation from switch 1 and switch 2 and LED assignment
 				leds_lab2 sum(switch1, switch2, leds);
-
 
  endmodule 

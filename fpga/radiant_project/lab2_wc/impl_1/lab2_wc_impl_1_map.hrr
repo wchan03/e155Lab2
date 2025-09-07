@@ -3,18 +3,42 @@ Report for cell lab2_wc
    Instance path: lab2_wc
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         23        100.0
-                               LUTGATE	          3        100.0
+                                  LUT4	         40        100.0
+                               LUTGATE	         20        100.0
                                 LUTCCU	         20        100.0
-                                 IOBUF	         14        100.0
+                                 IOBUF	         22        100.0
                                 PFUREG	         19        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                              demux2_1	          1         4.3
+                              demux2_1	          1         2.5
+                             leds_lab2	          1        17.5
+                                  mux2	          1        10.0
+                              seg_disp	          1        17.5
+---------------------------------------------------
+Report for cell leds_lab2
+   Instance path: lab2_wc/sum
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7        17.5
+                               LUTGATE	          7        35.0
+---------------------------------------------------
+Report for cell seg_disp
+   Instance path: lab2_wc/sd
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7        17.5
+                               LUTGATE	          7        35.0
 ---------------------------------------------------
 Report for cell demux2_1
    Instance path: lab2_wc/dm
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	          1         4.3
-                               LUTGATE	          1        33.3
+                                  LUT4	          1         2.5
+                               LUTGATE	          1         5.0
+---------------------------------------------------
+Report for cell mux2
+   Instance path: lab2_wc/in
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          4        10.0
+                               LUTGATE	          4        20.0
