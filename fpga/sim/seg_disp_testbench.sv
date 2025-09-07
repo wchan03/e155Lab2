@@ -3,16 +3,18 @@
 // Sept. 5, 2025
 // Testbench for the segment display module
 
+
+
 module seg_disp_testbench();
 	logic clk, reset;
 	logic [3:0] s;
 	logic [6:0] seg; 
 	logic [6:0] expected;
 	logic [31:0] vectornum, errors;
-	logic [11:0] testvectors[10000:0];
+	logic [10:0] testvectors[10000:0];
 	
 	//Instantiate device under test
-	seg_disp sd(s, seg); 
+	seg_disp dut(s, seg); 
 	
 	// Generate clock 
 	always 
@@ -23,27 +25,28 @@ module seg_disp_testbench();
 	initial
 		begin
 			$readmemb("seg_disp.tv", testvectors);
-			vectornum = 0; errors = 0; reset = 1; #22; reset = 0;
+			vectornum = 0; errors = 0; reset = 1; #5; reset = 0;
 		end
 	
 	//apply test vectors at rising of clock
 	always @(posedge clk)
 		begin
-			 {s, expected} = testvectors[vectornum];
-			 #1; //TODO maybe change this
+			#1; //TODO maybe change this
+			{s, expected} = testvectors[vectornum];
 		end
 		
+	
 	//check results on falling edge of clock
 	always @(negedge clk)
 		if (~reset) begin //skip during reset
 			if(seg != expected) begin
 				//check result
 				$display("error! inputs = %b", s);
-				$display("outputs = %b (%b expected", seg, expected);
+				$display("outputs = %b (%b expected)", seg, expected);
 				errors = errors + 1;
 			end 
 			vectornum = vectornum + 1;
-			if(testvectors[vectornum] === 8'bx) begin
+			if(testvectors[vectornum] === 11'bx) begin
 				$display("%d tests completed with %d errors", vectornum, errors);
 				$stop;
 			end

@@ -13,114 +13,154 @@
 # // of the Customer's facilities without the express written permission of SISW,
 # // and may not be used in any way not expressly authorized by SISW.
 # //
-# Loading project lab2_wc
-# Compile of seg_disp_testbench.sv failed with 4 errors.
-# Compile of seg_disp.sv failed with 100 errors.
-# 2 compiles, 2 failed with 104 errors.
+# Loading project lab2_testing
+# Compile of leds_testbench.sv was successful.
+# Compile of mux2_testbench.sv was successful.
 # Compile of seg_disp_testbench.sv was successful.
-# Compile of seg_disp.sv failed with 100 errors.
-# 2 compiles, 1 failed with 100 errors.
-# Compile of seg_disp.sv failed with 100 errors.
-# Compile of seg_disp_testbench.sv was successful.
-# Compile of seg_disp.sv failed with 100 errors.
-# 2 compiles, 1 failed with 100 errors.
-# Compile of seg_disp_testbench.sv was successful.
-# Compile of seg_disp.sv failed with 100 errors.
-# 2 compiles, 1 failed with 100 errors.
-# Compile of seg_disp_testbench.sv was successful.
-# Compile of seg_disp.sv failed with 49 errors.
-# 2 compiles, 1 failed with 49 errors.
-# Compile of seg_disp_testbench.sv was successful.
+# Compile of demux2_1.sv was successful.
+# Compile of leds_lab2.sv was successful.
+# Compile of mux2.sv was successful.
 # Compile of seg_disp.sv was successful.
-# 2 compiles, 0 failed with no errors.
-vsim -gui work.seg_disp_testbench -L iCE40UP -voptargs=+acc
-# vsim -gui work.seg_disp_testbench -L iCE40UP -voptargs="+acc" 
-# Start time: 16:43:55 on Sep 05,2025
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.leds_lab2 work.leds_testbench
+# vsim -gui work.leds_lab2 work.leds_testbench 
+# Start time: 16:18:37 on Sep 07,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error (suppressible): C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/leds_testbench.sv(41): (vopt-7063) Failed to find 's' in hierarchical name 's'.
+#         Region: leds_testbench
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
+# Error loading design
+# End time: 16:18:37 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 6
+# Compile of leds_testbench.sv was successful.
+vsim -gui work.leds_lab2 work.leds_testbench
+# vsim -gui work.leds_lab2 work.leds_testbench 
+# Start time: 16:19:36 on Sep 07,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.leds_lab2(fast)
+# Loading work.leds_testbench(fast)
+add wave -position end  sim:/leds_lab2/switch1
+add wave -position end  sim:/leds_lab2/switch2
+add wave -position end  sim:/leds_lab2/leds
+run 300
+# ** Warning: (vsim-PLI-3406) Too many digits (13) in data on line 3 of file "leds.tv". (Max is 12.)    : C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/leds_testbench.sv(24)
+#    Time: 0 ns  Iteration: 0  Instance: /leds_testbench
+# Compile of leds_testbench.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.leds_lab2(fast)
+# Loading work.leds_testbench(fast)
+run 300
+add wave -position end  sim:/leds_testbench/testvectors
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.leds_lab2(fast)
+# Loading work.leds_testbench(fast)
+run 300
+quit -sim
+# End time: 16:23:56 on Sep 07,2025, Elapsed time: 0:04:20
+# Errors: 0, Warnings: 1
+vsim -gui work.leds_testbench -voptargs=+acc
+# vsim -gui work.leds_testbench -voptargs="+acc" 
+# Start time: 16:24:12 on Sep 07,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.leds_testbench(fast)
+# Loading work.leds_lab2(fast)
+run 100
+add wave -position end  sim:/leds_testbench/switch1
+add wave -position end  sim:/leds_testbench/switch2
+add wave -position end  sim:/leds_testbench/leds_expected
+run 400
+# Causality operation skipped due to absence of debug database file
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.leds_testbench(fast)
+# Loading work.leds_lab2(fast)
+run 300
+# Compile of leds_testbench.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.leds_testbench(fast)
+# Loading work.leds_lab2(fast)
+run 300
+#         11 tests completed with          0 errors
+# ** Note: $stop    : C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/leds_testbench.sv(48)
+#    Time: 125 ns  Iteration: 1  Instance: /leds_testbench
+# Break in Module leds_testbench at C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/leds_testbench.sv line 48
+quit -sim
+# End time: 16:33:23 on Sep 07,2025, Elapsed time: 0:09:11
+# Errors: 0, Warnings: 2
+vsim -gui -voptargs=+acc work.seg_disp_testbench
+# vsim -gui -voptargs="+acc" work.seg_disp_testbench 
+# Start time: 16:33:37 on Sep 07,2025
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # Loading sv_std.std
 # Loading work.seg_disp_testbench(fast)
 # Loading work.seg_disp(fast)
-add wave -position insertpoint  \
-sim:/seg_disp_testbench/s \
-sim:/seg_disp_testbench/seg \
-sim:/seg_disp_testbench/expected
-run 1000
-# error! inputs = 0000
-# outputs = 0000000 (0111111 expected
+add wave -position end  sim:/seg_disp_testbench/s
+add wave -position end  sim:/seg_disp_testbench/seg
+add wave -position end  sim:/seg_disp_testbench/expected
+run 300
 # error! inputs = 0001
-# outputs = 1000000 (0000110 expected
+# outputs = 0000000 (1111001 expected)
 # error! inputs = 0010
-# outputs = 1111001 (1011011 expected
+# outputs = 1000000 (0100100 expected)
 # error! inputs = 0011
-# outputs = 0100100 (1001111 expected
+# outputs = 1111001 (0110000 expected)
 # error! inputs = 0100
-# outputs = 0110000 (1100110 expected
+# outputs = 0100100 (0011001 expected)
 # error! inputs = 0101
-# outputs = 0011001 (1101101 expected
+# outputs = 0110000 (0010010 expected)
 # error! inputs = 0110
-# outputs = 0010010 (1111101 expected
+# outputs = 0011001 (0000010 expected)
 # error! inputs = 0111
-# outputs = 0000010 (0000111 expected
+# outputs = 0010010 (1111000 expected)
 # error! inputs = 1000
-# outputs = 1111000 (1111111 expected
+# outputs = 0000010 (0000000 expected)
 # error! inputs = 1001
-# outputs = 0000000 (1101111 expected
+# outputs = 1111000 (0010000 expected)
 # error! inputs = 1010
-# outputs = 0010000 (1110111 expected
+# outputs = 0000000 (0001000 expected)
 # error! inputs = 1011
-# outputs = 0001000 (1111100 expected
+# outputs = 0010000 (0000011 expected)
 # error! inputs = 1100
-# outputs = 0000011 (1011000 expected
+# outputs = 0001000 (0100111 expected)
 # error! inputs = 1101
-# outputs = 0100111 (1011110 expected
+# outputs = 0000011 (0100001 expected)
 # error! inputs = 1110
-# outputs = 0100001 (1111001 expected
+# outputs = 0100111 (0000110 expected)
 # error! inputs = 1111
-# outputs = 0000110 (1110001 expected
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading work.seg_disp_testbench(fast)
-# Loading work.seg_disp(fast)
-run 500
-# error! inputs = 0000
-# outputs = 0000000 (1000000 expected
-# error! inputs = 0001
-# outputs = 1000000 (1111001 expected
-# error! inputs = 0010
-# outputs = 1111001 (0100100 expected
-# error! inputs = 0011
-# outputs = 0100100 (0110000 expected
-# error! inputs = 0100
-# outputs = 0110000 (0011001 expected
-# error! inputs = 0101
-# outputs = 0011001 (0010010 expected
-# error! inputs = 0110
-# outputs = 0010010 (0000010 expected
-# error! inputs = 0111
-# outputs = 0000010 (1111000 expected
-# error! inputs = 1000
-# outputs = 1111000 (0000000 expected
-# error! inputs = 1001
-# outputs = 0000000 (0010000 expected
-# error! inputs = 1010
-# outputs = 0010000 (0001000 expected
-# error! inputs = 1011
-# outputs = 0001000 (0000011 expected
-# error! inputs = 1100
-# outputs = 0000011 (0100111 expected
-# error! inputs = 1101
-# outputs = 0100111 (0100001 expected
-# error! inputs = 1110
-# outputs = 0100001 (0000110 expected
-# error! inputs = 1111
-# outputs = 0000110 (0001110 expected
+# outputs = 0100001 (0001110 expected)
 # Compile of seg_disp_testbench.sv was successful.
+# Compile of seg_disp.sv failed with 2 errors.
+# 2 compiles, 1 failed with 2 errors.
+# Compile of seg_disp.sv failed with 2 errors.
+# Compile of leds_testbench.sv was successful.
+# Compile of mux2_testbench.sv was successful.
+# Compile of seg_disp_testbench.sv was successful.
+# Compile of demux2_1.sv was successful.
+# Compile of leds_lab2.sv was successful.
+# Compile of mux2.sv was successful.
+# Compile of seg_disp.sv failed with 3 errors.
+# 7 compiles, 1 failed with 3 errors.
+# Compile of seg_disp.sv failed with 1 errors.
+# Compile of seg_disp.sv failed with 3 errors.
 # Compile of seg_disp.sv was successful.
-# 2 compiles, 0 failed with no errors.
 restart -f
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
@@ -129,122 +169,42 @@ restart -f
 # Loading sv_std.std
 # Loading work.seg_disp_testbench(fast)
 # Loading work.seg_disp(fast)
-run 1000
+run 300
 # error! inputs = 0000
-# outputs = 0000000 (1000000 expected
+# outputs = 0000000 (1000000 expected)
 # error! inputs = 0001
-# outputs = 1000000 (1111001 expected
+# outputs = 1000000 (1111001 expected)
 # error! inputs = 0010
-# outputs = 1111001 (0100100 expected
+# outputs = 1111001 (0100100 expected)
 # error! inputs = 0011
-# outputs = 0100100 (0110000 expected
+# outputs = 0100100 (0110000 expected)
 # error! inputs = 0100
-# outputs = 0110000 (0011001 expected
+# outputs = 0110000 (0011001 expected)
 # error! inputs = 0101
-# outputs = 0011001 (0010010 expected
+# outputs = 0011001 (0010010 expected)
 # error! inputs = 0110
-# outputs = 0010010 (0000010 expected
+# outputs = 0010010 (0000010 expected)
 # error! inputs = 0111
-# outputs = 0000010 (1111000 expected
+# outputs = 0000010 (1111000 expected)
 # error! inputs = 1000
-# outputs = 1111000 (0000000 expected
+# outputs = 1111000 (0000000 expected)
 # error! inputs = 1001
-# outputs = 0000000 (0010000 expected
+# outputs = 0000000 (0010000 expected)
 # error! inputs = 1010
-# outputs = 0010000 (0001000 expected
+# outputs = 0010000 (0001000 expected)
 # error! inputs = 1011
-# outputs = 0001000 (0000011 expected
+# outputs = 0001000 (0000011 expected)
 # error! inputs = 1100
-# outputs = 0000011 (0100111 expected
+# outputs = 0000011 (0100111 expected)
 # error! inputs = 1101
-# outputs = 0100111 (0100001 expected
+# outputs = 0100111 (0100001 expected)
 # error! inputs = 1110
-# outputs = 0100001 (0000110 expected
+# outputs = 0100001 (0000110 expected)
 # error! inputs = 1111
-# outputs = 0000110 (0001110 expected
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading work.seg_disp_testbench(fast)
-# Loading work.seg_disp(fast)
-run 200
-# error! inputs = 0000
-# outputs = 0000000 (1000000 expected
-# error! inputs = 0001
-# outputs = 1000000 (1111001 expected
-# error! inputs = 0010
-# outputs = 1111001 (0100100 expected
-# error! inputs = 0011
-# outputs = 0100100 (0110000 expected
-# error! inputs = 0100
-# outputs = 0110000 (0011001 expected
-# error! inputs = 0101
-# outputs = 0011001 (0010010 expected
-# error! inputs = 0110
-# outputs = 0010010 (0000010 expected
-# error! inputs = 0111
-# outputs = 0000010 (1111000 expected
-# error! inputs = 1000
-# outputs = 1111000 (0000000 expected
-# error! inputs = 1001
-# outputs = 0000000 (0010000 expected
-# error! inputs = 1010
-# outputs = 0010000 (0001000 expected
-# error! inputs = 1011
-# outputs = 0001000 (0000011 expected
-# error! inputs = 1100
-# outputs = 0000011 (0100111 expected
-# error! inputs = 1101
-# outputs = 0100111 (0100001 expected
-# error! inputs = 1110
-# outputs = 0100001 (0000110 expected
-# error! inputs = 1111
-# outputs = 0000110 (0001110 expected
-# Causality operation skipped due to absence of debug database file
-# Compile of seg_disp_testbench.sv was successful.
-# Compile of seg_disp.sv was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.seg_disp_testbench(fast)
-# Loading work.seg_disp(fast)
-run 200
-# error! inputs = 0000
-# outputs = 0000000 (1000000 expected
-# error! inputs = 0001
-# outputs = 1000000 (1111001 expected
-# error! inputs = 0010
-# outputs = 1111001 (0100100 expected
-# error! inputs = 0011
-# outputs = 0100100 (0110000 expected
-# error! inputs = 0100
-# outputs = 0110000 (0011001 expected
-# error! inputs = 0101
-# outputs = 0011001 (0010010 expected
-# error! inputs = 0110
-# outputs = 0010010 (0000010 expected
-# error! inputs = 0111
-# outputs = 0000010 (1111000 expected
-# error! inputs = 1000
-# outputs = 1111000 (0000000 expected
-# error! inputs = 1001
-# outputs = 0000000 (0010000 expected
-# error! inputs = 1010
-# outputs = 0010000 (0001000 expected
-# error! inputs = 1011
-# outputs = 0001000 (0000011 expected
-# error! inputs = 1100
-# outputs = 0000011 (0100111 expected
-# error! inputs = 1101
-# outputs = 0100111 (0100001 expected
-# error! inputs = 1110
-# outputs = 0100001 (0000110 expected
-# error! inputs = 1111
-# outputs = 0000110 (0001110 expected
-# End time: 16:54:45 on Sep 05,2025, Elapsed time: 0:10:50
+# outputs = 0000110 (0001110 expected)
+#         16 tests completed with         16 errors
+# ** Note: $stop    : C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/seg_disp_testbench.sv(51)
+#    Time: 155 ns  Iteration: 1  Instance: /seg_disp_testbench
+# Break in Module seg_disp_testbench at C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/seg_disp_testbench.sv line 51
+# End time: 16:45:14 on Sep 07,2025, Elapsed time: 0:11:37
 # Errors: 0, Warnings: 2

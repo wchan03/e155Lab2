@@ -7,6 +7,7 @@ module seg_disp(input logic [3:0] s,
 				output logic [6:0] seg ); 
 				
 	logic [6:0] seg_intm;
+	
 	always_comb begin 
 		// seg[0] is A 
 		// seg[6] is G 
