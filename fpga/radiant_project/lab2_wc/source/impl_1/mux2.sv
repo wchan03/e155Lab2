@@ -3,8 +3,8 @@
 // Sept. 5, 2025
 // Basic 2-in 1-out mux
 
-module mux2 #(parameter WIDTH = 2)
-			(input logic [WIDTH-1:0] d0, d1. 
+module mux2 #(parameter WIDTH = 4)
+			(input logic [WIDTH-1:0] d0, d1,
 			input logic s,
 			output logic [WIDTH-1:0] out);
 			

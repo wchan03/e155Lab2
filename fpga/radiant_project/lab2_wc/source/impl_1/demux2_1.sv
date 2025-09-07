@@ -3,8 +3,8 @@
 // Sept. 5, 2025
 // Basic demux 1 in 2 out for Lab 2
 
-module demux2_1(input logic select;
-				output logic [2:0] com_an); //Common Anode
+module demux2_1(input logic select,
+				output logic [1:0] com_an); //Common Anode
 	
 	always_comb begin
 		case(select)

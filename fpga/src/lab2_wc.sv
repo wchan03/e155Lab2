@@ -4,11 +4,11 @@
 // Top Level Module for Lab 2: Mutiplexed 7-Seg Display
 // This module TODO: FINISH THIS
 
-module lab2_wc(//input logic clk, reset //TODO: is reset necessary?
-                input logic [3:0] switch_1, switch_2, // Two DIP switches
+module lab2_wc( input logic [3:0] switch1, 
+				input logic [3:0] switch2, // Two DIP switches
                 output logic [6:0] seg_out,
 				output logic [4:0] leds, 
-				output logic [2:0] anodes); // Writing to the anodes
+				output logic [1:0] anodes); // Writing to the anodes
 				
 				logic select; //0 for display 0, 1 for display 1
 				logic [3:0] switch; // Selected switch data
@@ -24,14 +24,13 @@ module lab2_wc(//input logic clk, reset //TODO: is reset necessary?
 				always_ff @(posedge int_osc) begin  
 					counter <= counter + 19'd2; //operates at ~91.5Hz
 				end
+				
                 // Google AI says the human eye can detect up to 80Hz of flickering so started there
-				// Select is based on the clock, i think
-				//TODO: select from strobe using counter?
+				// Select is based on the clock
                 assign select = counter[19];
 				
-				
 				// Select input
-				mux2 (#4) in(switch1, switch2, select, switch); 
+				mux2 in(switch1, switch2, select, switch); 
 
                 // Segment Display Module
 				seg_disp sd(switch, seg_out); // Calculate segments 

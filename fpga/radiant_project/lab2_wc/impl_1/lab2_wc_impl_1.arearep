@@ -1,0 +1,46 @@
+----------------------------------------------------------------------
+Report for cell lab2_wc.TECH
+Register bits:  19 of 5280 (0.360%)
+I/O cells:      22
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2        10          100.0
+                            FD1P3XZ        19          100.0
+                              HSOSC         1          100.0
+                                 IB         8          100.0
+                               LUT4        19          100.0
+                                 OB        14          100.0
+SUB MODULES
+                           demux2_1         1
+                          leds_lab2         1
+                               mux2         1
+                           seg_disp         1
+                              TOTAL        75
+----------------------------------------------------------------------
+Report for cell leds_lab2.v1
+Instance Path : sum
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         7           36.8
+                              TOTAL         7
+----------------------------------------------------------------------
+Report for cell seg_disp.v1
+Instance Path : sd
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         7           36.8
+                              TOTAL         7
+----------------------------------------------------------------------
+Report for cell demux2_1.v1
+Instance Path : dm
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         1            5.3
+                              TOTAL         1
+----------------------------------------------------------------------
+Report for cell mux2.v1
+Instance Path : in
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         4           21.1
+                              TOTAL         4

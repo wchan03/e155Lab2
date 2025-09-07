@@ -1,0 +1,20 @@
+---------------------------------------------------
+Report for cell lab2_wc
+   Instance path: lab2_wc
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         23        100.0
+                               LUTGATE	          3        100.0
+                                LUTCCU	         20        100.0
+                                 IOBUF	         14        100.0
+                                PFUREG	         19        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                              demux2_1	          1         4.3
+---------------------------------------------------
+Report for cell demux2_1
+   Instance path: lab2_wc/dm
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          1         4.3
+                               LUTGATE	          1        33.3
