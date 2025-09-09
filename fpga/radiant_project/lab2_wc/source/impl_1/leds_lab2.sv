@@ -8,14 +8,9 @@ module leds_lab2(input logic [3:0] switch1, switch2,
 	logic [4:0] total; // Values from two switches added together
 	
 	//Calculate total 
-	assign total = switch1 + switch2; //TODO: does this work?
+	assign total = switch1 + switch2; 
 	
-	// Assign LEDs appropriatley 
-	//TODO: double-check endiannesss
-	assign leds[0] = total[0];
-	assign leds[1] = total[1];
-	assign leds[2] = total[2];
-	assign leds[3] = total[3];
-	assign leds[4] = total[4];
+	// Assign LEDs appropriately
+	assign leds = total;
 				
 endmodule

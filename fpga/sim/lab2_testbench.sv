@@ -22,16 +22,21 @@ module lab2_testbench();
 	// Generate clock 
 	always 
 		begin 
-			clk = 1; #21645021; clk = 0; #21645021;
+			clk = 1; #43290045; clk = 0; #43290045;
 		end 
 		
-
-    // check assertions
-    // switch 1 = 0101, switch 2 = 1000, seg_out = 1110001, leds = 01111
-    //check if only one or the other is high
-    assert 
-        property (@(posedge clk) anodes[0] |-> (anodes[1] == 0))
-        else $error ("not toggling");
+    initial begin
+        dut.counter = 0;
+        // check assertions
+        switch1 = 4'b0101
+        switch2 = 4'b1000
+        //seg_out = 1110001, leds = 01111
+        //check if only one or the other is high
+        assert 
+            property (@(posedge clk) anodes[0] |-> (anodes[1] == 0))
+            else $error ("not toggling");
+        $finish
+    end
 
 
 endmodule

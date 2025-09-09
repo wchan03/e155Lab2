@@ -24,7 +24,7 @@ module lab2_wc( input logic [3:0] switch1,
 					counter <= counter + 19'd2; //operates at ~46.2 Hz
 				end
 				
-                // Google AI says the human eye can detect up to 80Hz of flickering so started there
+                // Google AI says the human eye can detect up to 40Hz of flickering so started there
 				// Select is based on the clock
                 assign select = counter[19];
 				
