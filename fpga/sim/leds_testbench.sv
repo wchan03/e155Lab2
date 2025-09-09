@@ -9,6 +9,7 @@ module leds_testbench();
 	logic [4:0] leds, leds_expected;
 	logic [31:0] vectornum, errors;
 	logic [12:0] testvectors[10000:0];
+    logic [4:0] sum;
 	
 	//Instantiate device under test
 	leds_lab2 dut(switch1, switch2, leds); 
