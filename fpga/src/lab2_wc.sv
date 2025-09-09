@@ -21,7 +21,7 @@ module lab2_wc( input logic [3:0] switch1,
 
 				// Counter
 				always_ff @(posedge int_osc) begin  
-					counter <= counter + 19'd2; //operates at ~91.5Hz
+					counter <= counter + 19'd2; //operates at ~46.2 Hz
 				end
 				
                 // Google AI says the human eye can detect up to 80Hz of flickering so started there

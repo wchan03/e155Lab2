@@ -39,7 +39,7 @@ module leds_testbench();
 			if(leds != leds_expected) begin
 				//check result
 				$display("error! inputs = %b, %b", switch1, switch2);
-				$display("outputs = %b (%b expected", leds, leds_expected);
+				$display("outputs = %b (%b expected)", leds, leds_expected);
 				errors = errors + 1;
 			end 
 			vectornum = vectornum + 1;

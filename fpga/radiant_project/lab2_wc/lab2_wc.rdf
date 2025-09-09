@@ -27,6 +27,9 @@
         <Source name="../../sim/seg_disp_testbench.sv" type="Verilog" type_short="Verilog" excluded="TRUE">
             <Options VerilogStandard="System Verilog"/>
         </Source>
+        <Source name="../../sim/demux_testbench.sv" type="Verilog" type_short="Verilog" excluded="TRUE">
+            <Options VerilogStandard="System Verilog"/>
+        </Source>
         <Source name="pins.pdc" type="Physical Constraints File" type_short="PDC">
             <Options/>
         </Source>

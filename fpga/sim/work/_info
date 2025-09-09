@@ -1,15 +1,14 @@
 m255
 K4
 z2
-Z0 !s12c _opt
+!s11e vcom 2024.2 2024.05, May 20 2024
+Z0 !s12c _opt2
 Z1 !s99 nomlopt
-R0
-R1
-Z2 !s12c _opt2
+Z2 !s12c _opt1
 R1
 R2
 R1
-Z3 !s12c _opt1
+Z3 !s12c _opt
 R1
 R3
 R1
@@ -17,27 +16,35 @@ R0
 R1
 R0
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R3
 R1
-R0
+R3
 R1
-R0
+R3
 R1
-R0
+R3
 R1
-R0
+R3
 R1
-R0
+R3
 R1
-R0
+R3
 R1
-R0
+R3
 R1
-R0
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
 R1
 !s11f vlog 2024.2 2024.05, May 20 2024
 13
@@ -61,29 +68,29 @@ Z9 o-quiet -auto_acc_if_foreign -work work +acc
 Z10 tCvgOpt 0
 n@_opt
 Z11 OL;O;2024.2;79
+R4
 T_opt1
-!s110 1757287296
-V4OzLnDCdX`BSiAjZ:dWM:1
-04 9 4 work leds_lab2 fast 0
-Z12 04 14 4 work leds_testbench fast 0
-=2-00be43eae9b7-68be1380-22c-4954
+!s110 1757374276
+VJnJS0310PYMV3c4MU[M`L1
+04 14 4 work mux2_testbench fast 0
+=3-00be43eaec61-68bf6743-370-5f64
 R1
-!s12f OEM25U3 
+R5
 R6
 R7
 R8
-o-quiet -auto_acc_if_foreign -work work
+R9
 R10
 n@_opt1
 R11
 R4
 T_opt2
-!s110 1757287812
-VB0B7fYT;c>ScZWZBA3a]M0
-R12
-=3-00be43eae9b7-68be1584-1a9-dc0
+!s110 1757375118
+V9HTzD8iY5`92_6eK:z[YP2
+04 8 4 work demux2_1 fast 0
+=1-00be43eaec61-68bf6a8e-113-5f7c
 R1
-R5
+!s12f OEM25U1 
 R6
 R7
 R8
@@ -93,34 +100,36 @@ n@_opt2
 R11
 R4
 vdemux2_1
-2C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/radiant_project/lab2_wc/source/impl_1/demux2_1.sv
-Z13 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z14 !s110 1757288182
+Z12 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z13 !s110 1757373613
+Z14 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
 !i10b 1
 !s100 T[?KomZKaf@O1?1eJ>Ymd1
 IHR56gmGz_G[3jR:^K?;bK1
 S1
 Z15 dC:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim
-Z16 w1757276352
+Z16 w1757370255
 8C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/radiant_project/lab2_wc/source/impl_1/demux2_1.sv
 FC:/Users/wchan/Documents/GitHub/e155Lab2/fpga/radiant_project/lab2_wc/source/impl_1/demux2_1.sv
-!i122 66
+!i122 73
 L0 6 11
-Z17 VDg1SIo80bB@j0V0VzS_@n1
-Z18 OL;L;2024.2;79
-r1
-!s85 0
+Z17 OL;L;2024.2;79
 31
-Z19 !s108 1757288182.000000
+Z18 !s108 1757373613.000000
 !s107 C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/radiant_project/lab2_wc/source/impl_1/demux2_1.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/radiant_project/lab2_wc/source/impl_1/demux2_1.sv|
 !i113 0
-Z20 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z19 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R10
 vleds_lab2
-2C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/radiant_project/lab2_wc/source/impl_1/leds_lab2.sv
+R12
 R13
 R14
+r1
+!s85 0
+2C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/radiant_project/lab2_wc/source/impl_1/leds_lab2.sv
 !i10b 1
 !s100 aPk@OTP9R4zM[SL^X:N?_3
 IB96492QICn9TbPaMe`A[=0
@@ -129,48 +138,48 @@ R15
 R16
 8C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/radiant_project/lab2_wc/source/impl_1/leds_lab2.sv
 FC:/Users/wchan/Documents/GitHub/e155Lab2/fpga/radiant_project/lab2_wc/source/impl_1/leds_lab2.sv
-!i122 67
+!i122 74
 L0 6 16
 R17
-R18
-r1
-!s85 0
 31
-R19
+R18
 !s107 C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/radiant_project/lab2_wc/source/impl_1/leds_lab2.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/radiant_project/lab2_wc/source/impl_1/leds_lab2.sv|
 !i113 0
-R20
+R19
 R10
 vleds_testbench
-2C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/leds_testbench.sv
+R12
 R13
 R14
-!i10b 1
-!s100 e6QTJjhW@Sl3iJ^FC:87T3
-I_`=efVdIGzK1OPKoS]PdC0
-S1
-R15
-w1757287798
-8C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/leds_testbench.sv
-FC:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/leds_testbench.sv
-!i122 63
-L0 6 46
-R17
-R18
 r1
 !s85 0
+2C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/leds_testbench.sv
+!i10b 1
+!s100 L?YzGJ2>9?k1Dm7>Y_I8P1
+I4Mkke9Te=io:74iLaMzOY3
+S1
+R15
+w1757372722
+8C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/leds_testbench.sv
+FC:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/leds_testbench.sv
+!i122 70
+Z20 L0 6 46
+R17
 31
-R19
+!s108 1757373612.000000
 !s107 C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/leds_testbench.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/leds_testbench.sv|
 !i113 0
-R20
+R19
 R10
 vmux2
-2C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/radiant_project/lab2_wc/source/impl_1/mux2.sv
+R12
 R13
 R14
+r1
+!s85 0
+2C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/radiant_project/lab2_wc/source/impl_1/mux2.sv
 !i10b 1
 !s100 E][mVBd`g@KgQdJ5HniQB0
 I1:>T0AezeHC<@bV`<BiAo3
@@ -179,91 +188,88 @@ R15
 R16
 8C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/radiant_project/lab2_wc/source/impl_1/mux2.sv
 FC:/Users/wchan/Documents/GitHub/e155Lab2/fpga/radiant_project/lab2_wc/source/impl_1/mux2.sv
-!i122 68
+!i122 75
 L0 6 8
 R17
-R18
-r1
-!s85 0
 31
-R19
+R18
 !s107 C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/radiant_project/lab2_wc/source/impl_1/mux2.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/radiant_project/lab2_wc/source/impl_1/mux2.sv|
 !i113 0
-R20
+R19
 R10
 vmux2_testbench
-2C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/mux2_testbench.sv
-R13
+R12
+!s110 1757375090
 R14
-!i10b 1
-!s100 `ST>:J>A11V4[o<[3CNmS2
-InH6MN:LXMMY>a9be;df323
-S1
-R15
-R16
-8C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/mux2_testbench.sv
-FC:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/mux2_testbench.sv
-!i122 64
-L0 6 2
-R17
-R18
 r1
 !s85 0
-31
-R19
-!s107 C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/mux2_testbench.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/mux2_testbench.sv|
-!i113 0
+2C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/demux_testbench.sv
+!i10b 1
+!s100 hQU0nII_TOOONEd6Ezh=D1
+I5X=>]HR]0YIfI<U`b:lT]0
+S1
+R15
+w1757375082
+8C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/demux_testbench.sv
+FC:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/demux_testbench.sv
+!i122 78
 R20
+R17
+31
+!s108 1757375090.000000
+!s107 C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/demux_testbench.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/demux_testbench.sv|
+!i113 0
+R19
 R10
 vseg_disp
-2C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/radiant_project/lab2_wc/source/impl_1/seg_disp.sv
+R12
 R13
-!s110 1757288319
+R14
+r1
+!s85 0
+2C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/radiant_project/lab2_wc/source/impl_1/seg_disp.sv
 !i10b 1
 !s100 1zm91H0POK:CO:RU[>hok2
 I^6mFVSOHH^b<K[Uh;jMh72
 S1
 R15
-w1757288309
+Z21 w1757372473
 8C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/radiant_project/lab2_wc/source/impl_1/seg_disp.sv
 FC:/Users/wchan/Documents/GitHub/e155Lab2/fpga/radiant_project/lab2_wc/source/impl_1/seg_disp.sv
-!i122 69
+!i122 76
 L0 6 31
 R17
-R18
-r1
-!s85 0
 31
-!s108 1757288319.000000
+R18
 !s107 C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/radiant_project/lab2_wc/source/impl_1/seg_disp.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/radiant_project/lab2_wc/source/impl_1/seg_disp.sv|
 !i113 0
-R20
+R19
 R10
 vseg_disp_testbench
-2C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/seg_disp_testbench.sv
+R12
 R13
 R14
+r1
+!s85 0
+2C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/seg_disp_testbench.sv
 !i10b 1
 !s100 FH2SV]B2aJ2DU7]XUU][A2
 IUbaCPZZhf?PH1M?8l>iRz0
 S1
 R15
-w1757288082
+R21
 8C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/seg_disp_testbench.sv
 FC:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/seg_disp_testbench.sv
-!i122 65
+!i122 72
 L0 8 47
 R17
-R18
-r1
-!s85 0
 31
-R19
+R18
 !s107 C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/seg_disp_testbench.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/seg_disp_testbench.sv|
 !i113 0
-R20
+R19
 R10

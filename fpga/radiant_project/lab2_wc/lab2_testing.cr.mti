@@ -1,0 +1,19 @@
+C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/radiant_project/lab2_wc/source/impl_1/mux2.sv {2 {vlog -work work -vopt -sv -stats=none C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/radiant_project/lab2_wc/source/impl_1/mux2.sv
+** Warning: (vlog-14) Failed to open "C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/radiant_project/lab2_wc/lab2_testing.mpf" specified by the MODELSIM environment variable.
+No such file or directory. (errno = ENOENT)
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module mux2
+
+Top level modules:
+	mux2
+
+} {} {}} C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/mux2_testbench.sv {2 {vlog -work work -vopt -sv -stats=none C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/mux2_testbench.sv
+** Warning: (vlog-14) Failed to open "C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/radiant_project/lab2_wc/lab2_testing.mpf" specified by the MODELSIM environment variable.
+No such file or directory. (errno = ENOENT)
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module mux2_testbench
+
+Top level modules:
+	mux2_testbench
+
+} {} {}}
