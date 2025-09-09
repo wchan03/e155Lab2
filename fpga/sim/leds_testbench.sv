@@ -9,6 +9,7 @@ module leds_testbench();
 	logic [4:0] leds, leds_expected;
 	logic [31:0] vectornum, errors;
 	logic [12:0] testvectors[10000:0];
+    logic [4:0] sum;
 	
 	//Instantiate device under test
 	leds_lab2 dut(switch1, switch2, leds); 
@@ -19,10 +20,16 @@ module leds_testbench();
 			clk = 1; #5; clk = 0; #5;
 		end 
 		
-	initial
-		begin
-			$readmemb("leds.tv", testvectors);
-			vectornum = 0; errors = 0; reset = 1; #22; reset = 0;
+    //set up test vectors
+	initial begin
+        vectornum = 0;
+        for (i = 4'b0000; i < 4'b1111; i = i + 1) begin
+            for (y = 4'b0000; y < 4'b1111; y = y + 1) begin
+                sum = i + y; //TODO: correct nomenclature?
+                testvectors[vectornum] = {i, y, i+y};
+            end
+        end 
+		vectornum = 0; errors = 0; reset = 1; #22; reset = 0;
 		end
 	
 	//apply test vectors at rising of clock

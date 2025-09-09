@@ -16,7 +16,7 @@ module lab2_testbench();'
     logic [1:0] anodes;
  
 
-    //Instantiate dut. Operates at 91.5Hz
+    //Instantiate dut. Operates at 46.2Hz
     lab2_wc dut(switch1, switch2, seg_out, leds, anodes);
 
     // check assertions
