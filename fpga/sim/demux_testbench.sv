@@ -3,7 +3,7 @@
 // Sept. 8, 2025
 // Testbench for the lab 2 demux module
 
-module mux2_testbench();
+module demux_testbench();
     logic clk, reset, select;
     logic [1:0] anode_out, anode_expected;
 	logic [31:0] vectornum, errors;

@@ -1,0 +1,20 @@
+----------------------------------------------------------------------
+Report for cell seven_segment_multiplexer.TECH
+Register bits:  15 of 5280 (0.284%)
+I/O cells:      24
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ        15          100.0
+                                 IB        10          100.0
+                               LUT4        12          100.0
+                                 OB        14          100.0
+SUB MODULES
+              seven_segment_decoder         1
+                              TOTAL        52
+----------------------------------------------------------------------
+Report for cell seven_segment_decoder.v1
+Instance Path : decoder_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         7           58.3
+                              TOTAL         7

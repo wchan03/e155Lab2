@@ -14,146 +14,398 @@
 # // and may not be used in any way not expressly authorized by SISW.
 # //
 # Loading project lab2_testing
-# Compile of lab2_testbench.sv failed with 1 errors.
+# Compile of demux_testbench.sv was successful.
+# Compile of lab2_testbench.sv failed with 2 errors.
 # Compile of leds_testbench.sv was successful.
 # Compile of mux2_testbench.sv was successful.
 # Compile of seg_disp_testbench.sv was successful.
+# Compile of lab2_wc.sv was successful.
 # Compile of demux2_1.sv was successful.
 # Compile of leds_lab2.sv was successful.
 # Compile of mux2.sv was successful.
 # Compile of seg_disp.sv was successful.
-# 8 compiles, 1 failed with 1 error.
-vsim -gui work.mux2_testbench -voptargs=+acc
-# vsim -gui work.mux2_testbench -voptargs="+acc" 
-# Start time: 16:20:42 on Sep 08,2025
+# 10 compiles, 1 failed with 2 errors.
+# Compile of lab2_testbench.sv failed with 1 errors.
+# Compile of lab2_testbench.sv failed with 1 errors.
+# Compile of lab2_testbench.sv was successful.
+vsim -gui work.lab2_testbench
+# vsim -gui work.lab2_testbench 
+# Start time: 10:48:08 on Sep 09,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/src/lab2_wc.sv(20): Module 'HSOSC' is not defined.
+#  For instance 'hf_osc' at path 'lab2_testbench.dut'
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
+# Error loading design
+# End time: 10:48:09 on Sep 09,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 10
+vsim -gui work.lab2_testbench -voptargs=+acc -L iCE40UP
+# vsim -gui work.lab2_testbench -voptargs="+acc" -L iCE40UP 
+# Start time: 10:48:58 on Sep 09,2025
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # Loading sv_std.std
-# Loading work.mux2_testbench(fast)
+# Loading work.lab2_testbench(fast)
+# Loading work.lab2_wc(fast)
+# Loading iCE40UP.HSOSC(fast)
 # Loading work.mux2(fast)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'd0'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/radiant_project/lab2_wc/source/impl_1/mux2.sv(7).
-#    Time: 0 ns  Iteration: 0  Instance: /mux2_testbench/dut File: C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/mux2_testbench.sv Line: 14
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (4) for port 's'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/radiant_project/lab2_wc/source/impl_1/mux2.sv(8).
-#    Time: 0 ns  Iteration: 0  Instance: /mux2_testbench/dut File: C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/mux2_testbench.sv Line: 14
+# Loading work.seg_disp(fast)
+# Loading work.demux2_1(fast)
+# Loading work.leds_lab2(fast)
 add wave -position insertpoint  \
-sim:/mux2_testbench/select \
-sim:/mux2_testbench/switch1 \
-sim:/mux2_testbench/switch2 \
-sim:/mux2_testbench/switch_out \
-sim:/mux2_testbench/switch_expected
-run 300
-# error! inputs = 1, 0000, 0000
-# outputs = 0001 (0000 expected)
-# error! inputs = 1, 1010, 0101
-# outputs = 1010 (0101 expected)
-#          4 tests completed with          2 errors
-# ** Note: $stop    : C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/mux2_testbench.sv(48)
-#    Time: 55 ns  Iteration: 1  Instance: /mux2_testbench
-# Break in Module mux2_testbench at C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/mux2_testbench.sv line 48
+sim:/lab2_testbench/clk \
+sim:/lab2_testbench/reset \
+sim:/lab2_testbench/switch1 \
+sim:/lab2_testbench/switch2 \
+sim:/lab2_testbench/seg_out \
+sim:/lab2_testbench/leds \
+sim:/lab2_testbench/anodes
+run 100
+run 500000
 restart -f
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-8009) Loading existing optimized design _opt
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading work.mux2_testbench(fast)
+# Loading work.lab2_testbench(fast)
+# Loading work.lab2_wc(fast)
+# Loading iCE40UP.HSOSC(fast)
 # Loading work.mux2(fast)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'd0'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/radiant_project/lab2_wc/source/impl_1/mux2.sv(7).
-#    Time: 0 ns  Iteration: 0  Instance: /mux2_testbench/dut File: C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/mux2_testbench.sv Line: 14
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (4) for port 's'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/radiant_project/lab2_wc/source/impl_1/mux2.sv(8).
-#    Time: 0 ns  Iteration: 0  Instance: /mux2_testbench/dut File: C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/mux2_testbench.sv Line: 14
-run 400
-# error! inputs = 1, 0000, 0000
-# outputs = 0001 (0000 expected)
-# error! inputs = 0, 1010, 0101
-# outputs = 1010 (0101 expected)
-#          4 tests completed with          2 errors
-# ** Note: $stop    : C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/mux2_testbench.sv(48)
-#    Time: 55 ns  Iteration: 1  Instance: /mux2_testbench
-# Break in Module mux2_testbench at C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/mux2_testbench.sv line 48
-# Compile of mux2_testbench.sv was successful.
+# Loading work.seg_disp(fast)
+# Loading work.demux2_1(fast)
+# Loading work.leds_lab2(fast)
+run 800000000
+# Compile of lab2_testbench.sv failed with 2 errors.
+# Causality operation skipped due to absence of debug database file
+quit -sim
+# End time: 11:01:25 on Sep 09,2025, Elapsed time: 0:12:27
+# Errors: 0, Warnings: 3
+vsim -gui -voptargs=+acc -L iCE40UP work.leds_testbench
+# vsim -gui -voptargs="+acc" -L iCE40UP work.leds_testbench 
+# Start time: 11:01:38 on Sep 09,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.leds_testbench(fast)
+# Loading work.leds_lab2(fast)
+add wave -position insertpoint  \
+sim:/leds_testbench/switch1 \
+sim:/leds_testbench/switch2 \
+sim:/leds_testbench/leds \
+sim:/leds_testbench/leds_expected
+run 500
+#         11 tests completed with          0 errors
+# ** Note: $stop    : C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/leds_testbench.sv(48)
+#    Time: 125 ns  Iteration: 1  Instance: /leds_testbench
+# Break in Module leds_testbench at C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/leds_testbench.sv line 48
+# Compile of leds_testbench.sv failed with 3 errors.
+# Compile of leds_testbench.sv was successful.
 restart -f
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # Loading sv_std.std
-# Loading work.mux2_testbench(fast)
-# Loading work.mux2(fast)
-run 1000
-# error! inputs = 1010, 0101, 0
-# outputs = 1010 (0101 expected)
-# error! inputs = 1010, 0101, 1
-# outputs = 0101 (1010 expected)
-#          4 tests completed with          2 errors
-# ** Note: $stop    : C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/mux2_testbench.sv(49)
-#    Time: 55 ns  Iteration: 1  Instance: /mux2_testbench
-# Break in Module mux2_testbench at C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/mux2_testbench.sv line 49
+# Loading work.leds_testbench(fast)
+# Loading work.leds_lab2(fast)
+run 500
+# error! inputs = 0111, 0111
+# outputs = 01110 (01100 expected)
+#          1 tests completed with          1 errors
+# ** Note: $stop    : C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/leds_testbench.sv(54)
+#    Time: 25 ns  Iteration: 1  Instance: /leds_testbench
+# Break in Module leds_testbench at C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/leds_testbench.sv line 54
+# Compile of leds_testbench.sv was successful.
+run 500
+#          2 tests completed with          1 errors
+# ** Note: $stop    : C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/leds_testbench.sv(54)
+#    Time: 35 ns  Iteration: 1  Instance: /leds_testbench
+# Break in Module leds_testbench at C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/leds_testbench.sv line 54
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.leds_testbench(fast)
+# Loading work.leds_lab2(fast)
+run 500
+# error! inputs = 0111, 0111
+# outputs = 01110 (01100 expected)
+# Compile of leds_testbench.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.leds_testbench(fast)
+# Loading work.leds_lab2(fast)
+run 500
+# error! inputs = 0000, 0000
+# outputs = 00000 (10001 expected)
+# error! inputs = 0000, 0001
+# outputs = 00001 (00010 expected)
+# error! inputs = 0000, 0001
+# outputs = 00001 (10011 expected)
+# error! inputs = 0000, 0010
+# outputs = 00010 (00100 expected)
+# error! inputs = 0000, 0010
+# outputs = 00010 (10101 expected)
+# error! inputs = 0000, 0011
+# outputs = 00011 (00110 expected)
+# error! inputs = 0000, 0011
+# outputs = 00011 (10111 expected)
+# error! inputs = 0000, 0100
+# outputs = 00100 (01000 expected)
+# error! inputs = 0000, 0100
+# outputs = 00100 (11001 expected)
+# error! inputs = 0000, 0101
+# outputs = 00101 (01010 expected)
+# error! inputs = 0000, 0101
+# outputs = 00101 (11011 expected)
+# error! inputs = 0000, 0110
+# outputs = 00110 (01100 expected)
+# error! inputs = 0000, 0110
+# outputs = 00110 (11101 expected)
+# error! inputs = 0000, 0111
+# outputs = 00111 (01110 expected)
+# error! inputs = 0000, 1000
+# outputs = 01000 (00001 expected)
+# error! inputs = 0000, 1000
+# outputs = 01000 (10010 expected)
+# error! inputs = 0000, 1001
+# outputs = 01001 (00011 expected)
+# error! inputs = 0000, 1001
+# outputs = 01001 (10100 expected)
+# error! inputs = 0000, 1010
+# outputs = 01010 (00101 expected)
+# error! inputs = 0000, 1010
+# outputs = 01010 (10110 expected)
+# error! inputs = 0000, 1011
+# outputs = 01011 (00111 expected)
+# error! inputs = 0000, 1011
+# outputs = 01011 (11000 expected)
+# error! inputs = 0000, 1100
+# outputs = 01100 (01001 expected)
+# error! inputs = 0000, 1100
+# outputs = 01100 (11010 expected)
+# error! inputs = 0000, 1101
+# outputs = 01101 (01011 expected)
+# error! inputs = 0000, 1101
+# outputs = 01101 (11100 expected)
+# error! inputs = 0000, 1110
+# outputs = 01110 (01101 expected)
+# error! inputs = 0000, 1110
+# outputs = 01110 (11110 expected)
+# error! inputs = 0001, 0000
+# outputs = 00001 (00010 expected)
+# error! inputs = 0001, 0000
+# outputs = 00001 (10011 expected)
+# error! inputs = 0001, 0001
+# outputs = 00010 (00100 expected)
+# error! inputs = 0001, 0001
+# outputs = 00010 (10101 expected)
+# error! inputs = 0001, 0010
+# outputs = 00011 (00110 expected)
+# error! inputs = 0001, 0010
+# outputs = 00011 (10111 expected)
+# error! inputs = 0001, 0011
+# outputs = 00100 (01000 expected)
+# error! inputs = 0001, 0011
+# outputs = 00100 (11001 expected)
+# error! inputs = 0001, 0100
+# outputs = 00101 (01010 expected)
+# error! inputs = 0001, 0100
+# outputs = 00101 (11011 expected)
+# error! inputs = 0001, 0101
+# outputs = 00110 (01100 expected)
+# error! inputs = 0001, 0101
+# outputs = 00110 (11101 expected)
+# error! inputs = 0001, 0110
+# outputs = 00111 (01110 expected)
+# error! inputs = 0001, 0110
+# outputs = 00111 (11111 expected)
+# error! inputs = 0001, 0111
+# outputs = 01000 (00000 expected)
+# error! inputs = 0001, 1000
+# outputs = 01001 (00011 expected)
+# error! inputs = 0001, 1000
+# outputs = 01001 (10100 expected)
+# error! inputs = 0001, 1001
+# outputs = 01010 (00101 expected)
+# Compile of leds_testbench.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.leds_testbench(fast)
+# Loading work.leds_lab2(fast)
+run 500
 restart -f
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # ** Note: (vsim-8009) Loading existing optimized design _opt1
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading work.mux2_testbench(fast)
-# Loading work.mux2(fast)
-run 100
-# error! inputs = 1010, 0101, 0
-# outputs = 1010 (0101 expected)
-# error! inputs = 1010, 0101, 1
-# outputs = 0101 (1010 expected)
-#          4 tests completed with          2 errors
-# ** Note: $stop    : C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/mux2_testbench.sv(49)
-#    Time: 55 ns  Iteration: 1  Instance: /mux2_testbench
-# Break in Module mux2_testbench at C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/mux2_testbench.sv line 49
+# Loading work.leds_testbench(fast)
+# Loading work.leds_lab2(fast)
+run 800
 restart -f
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # ** Note: (vsim-8009) Loading existing optimized design _opt1
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading work.mux2_testbench(fast)
-# Loading work.mux2(fast)
-run 100
-#          4 tests completed with          0 errors
-# ** Note: $stop    : C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/mux2_testbench.sv(49)
-#    Time: 55 ns  Iteration: 1  Instance: /mux2_testbench
-# Break in Module mux2_testbench at C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/mux2_testbench.sv line 49
-# Compile of demux_testbench.sv failed with 2 errors.
-# Compile of demux_testbench.sv was successful.
+# Loading work.leds_testbench(fast)
+# Loading work.leds_lab2(fast)
+run 1500
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.leds_testbench(fast)
+# Loading work.leds_lab2(fast)
+run 256000
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.leds_testbench(fast)
+# Loading work.leds_lab2(fast)
+run 2500
 quit -sim
-# End time: 16:45:04 on Sep 08,2025, Elapsed time: 0:24:22
-# Errors: 0, Warnings: 5
-vsim -gui -voptargs=+acc work.demux2_1
-# vsim -gui -voptargs="+acc" work.demux2_1 
-# Start time: 16:45:17 on Sep 08,2025
+# End time: 11:17:42 on Sep 09,2025, Elapsed time: 0:16:04
+# Errors: 0, Warnings: 2
+vsim -gui -voptargs=+acc -L iCE40UP work.demux2_1
+# vsim -gui -voptargs="+acc" -L iCE40UP work.demux2_1 
+# Start time: 11:17:53 on Sep 09,2025
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # Loading sv_std.std
 # Loading work.demux2_1(fast)
 quit -sim
-# End time: 16:46:09 on Sep 08,2025, Elapsed time: 0:00:52
-# Errors: 0, Warnings: 2
 # Load canceled
-vlog -work C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/work -refresh -force_refresh
-# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
-# Start time: 16:46:41 on Sep 08,2025
-# vlog -reportprogress 300 -work C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/work -refresh -force_refresh 
-# -- Refreshing module demux2_1
-# -- Refreshing module leds_lab2
-# -- Refreshing module leds_testbench
-# -- Refreshing module mux2
-# -- Refreshing module mux2_testbench
-# -- Refreshing module seg_disp
-# -- Refreshing module seg_disp_testbench
-# End time: 16:46:41 on Sep 08,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -work C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/work -refresh -force_refresh
-# Questa Lattice OEM Edition-64 vcom 2024.2 Compiler 2024.05 May 20 2024
-# Start time: 16:46:41 on Sep 08,2025
-# vcom -reportprogress 300 -work C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/work -refresh -force_refresh 
-# -- Skipping module demux2_1
-# -- Skipping module leds_lab2
-# -- Skipping module leds_testbench
-# -- Skipping module mux2
-# -- Skipping module mux2_testbench
-# -- Skipping module seg_disp
-# -- Skipping module seg_disp_testbench
-# End time: 16:46:41 on Sep 08,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
+# End time: 11:18:42 on Sep 09,2025, Elapsed time: 0:00:49
+# Errors: 0, Warnings: 2
+dataset reload -f
+# Dataset not found: 
+add wave -position insertpoint 0
+# Compile of demux_testbench.sv was successful.
+vsim -gui -voptargs=+acc -L iCE40UP work.demux_testbench
+# vsim -gui -voptargs="+acc" -L iCE40UP work.demux_testbench 
+# Start time: 11:21:25 on Sep 09,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.demux_testbench(fast)
+# Loading work.demux2_1(fast)
+# ** Error (suppressible): (vsim-3839) Variable '/demux_testbench/anode_out', driven via a port connection, is multiply driven. See C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/demux_testbench.sv(14).
+#    Time: 0 ns  Iteration: 0  Instance: /demux_testbench File: C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/demux_testbench.sv Line: 32
+# Error loading design
+# End time: 11:21:49 on Sep 09,2025, Elapsed time: 0:00:24
+# Errors: 1, Warnings: 3
+vsim -gui -voptargs=+acc -L iCE40UP work.seg_disp_testbench
+# vsim -gui -voptargs="+acc" -L iCE40UP work.seg_disp_testbench 
+# Start time: 11:50:16 on Sep 09,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.seg_disp_testbench(fast)
+# Loading work.seg_disp(fast)
+run 500
+# error! inputs = 0000
+# outputs = 0000000 (1000000 expected)
+# error! inputs = 0001
+# outputs = 1000000 (1111001 expected)
+# error! inputs = 0010
+# outputs = 1111001 (0100100 expected)
+# error! inputs = 0011
+# outputs = 0100100 (0110000 expected)
+# error! inputs = 0100
+# outputs = 0110000 (0011001 expected)
+# error! inputs = 0101
+# outputs = 0011001 (0010010 expected)
+# error! inputs = 0110
+# outputs = 0010010 (0000010 expected)
+# error! inputs = 0111
+# outputs = 0000010 (1111000 expected)
+# error! inputs = 1000
+# outputs = 1111000 (0000000 expected)
+# error! inputs = 1001
+# outputs = 0000000 (0010000 expected)
+# error! inputs = 1010
+# outputs = 0010000 (0001000 expected)
+# error! inputs = 1011
+# outputs = 0001000 (0000011 expected)
+# error! inputs = 1100
+# outputs = 0000011 (0100111 expected)
+# error! inputs = 1101
+# outputs = 0100111 (0100001 expected)
+# error! inputs = 1110
+# outputs = 0100001 (0000110 expected)
+# error! inputs = 1111
+# outputs = 0000110 (0001110 expected)
+#         16 tests completed with         16 errors
+# ** Note: $stop    : C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/seg_disp_testbench.sv(51)
+#    Time: 155 ns  Iteration: 1  Instance: /seg_disp_testbench
+# Break in Module seg_disp_testbench at C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/seg_disp_testbench.sv line 51
+add wave -position end  sim:/seg_disp_testbench/s
+add wave -position end  sim:/seg_disp_testbench/seg
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.seg_disp_testbench(fast)
+# Loading work.seg_disp(fast)
+run 500
+# error! inputs = 0000
+# outputs = 0000000 (1000000 expected)
+# error! inputs = 0001
+# outputs = 1000000 (1111001 expected)
+# error! inputs = 0010
+# outputs = 1111001 (0100100 expected)
+# error! inputs = 0011
+# outputs = 0100100 (0110000 expected)
+# error! inputs = 0100
+# outputs = 0110000 (0011001 expected)
+# error! inputs = 0101
+# outputs = 0011001 (0010010 expected)
+# error! inputs = 0110
+# outputs = 0010010 (0000010 expected)
+# error! inputs = 0111
+# outputs = 0000010 (1111000 expected)
+# error! inputs = 1000
+# outputs = 1111000 (0000000 expected)
+# error! inputs = 1001
+# outputs = 0000000 (0010000 expected)
+# error! inputs = 1010
+# outputs = 0010000 (0001000 expected)
+# error! inputs = 1011
+# outputs = 0001000 (0000011 expected)
+# error! inputs = 1100
+# outputs = 0000011 (0100111 expected)
+# error! inputs = 1101
+# outputs = 0100111 (0100001 expected)
+# error! inputs = 1110
+# outputs = 0100001 (0000110 expected)
+# error! inputs = 1111
+# outputs = 0000110 (0001110 expected)
+#         16 tests completed with         16 errors
+# ** Note: $stop    : C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/seg_disp_testbench.sv(51)
+#    Time: 155 ns  Iteration: 1  Instance: /seg_disp_testbench
+# Break in Module seg_disp_testbench at C:/Users/wchan/Documents/GitHub/e155Lab2/fpga/sim/seg_disp_testbench.sv line 51
+quit -sim
+# End time: 11:52:01 on Sep 09,2025, Elapsed time: 0:01:45
+# Errors: 0, Warnings: 2
+vsim -gui -voptargs=+acc -L iCE40UP work.seg_disp_testbench
+# vsim -gui -voptargs="+acc" -L iCE40UP work.seg_disp_testbench 
+# Start time: 11:52:15 on Sep 09,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading sv_std.std
+# Loading work.seg_disp_testbench(fast)
+# Loading work.seg_disp(fast)
+# End time: 11:55:12 on Sep 09,2025, Elapsed time: 0:02:57
+# Errors: 0, Warnings: 1

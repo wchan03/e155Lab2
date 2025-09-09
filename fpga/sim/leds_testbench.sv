@@ -18,12 +18,20 @@ module leds_testbench();
 		begin 
 			clk = 1; #5; clk = 0; #5;
 		end 
-		
-	initial
-		begin
-			$readmemb("leds.tv", testvectors);
-			vectornum = 0; errors = 0; reset = 1; #22; reset = 0;
-		end
+    //set up test vectors
+	logic [3:0] i, y;
+	logic [4:0] sum;
+	initial begin
+			vectornum = 0;
+			for (i = 4'b0000; i < 4'b1111; i = i + 1) begin
+				for (y = 4'b0000; y < 4'b1111; y = y + 1) begin
+					sum = i + y; //TODO: correct nomenclature?
+					testvectors[vectornum] = {i, y, sum};
+					vectornum = vectornum +1;
+				end
+			end
+	vectornum = 0; errors = 0; reset = 1; #22; reset = 0;
+	end
 	
 	//apply test vectors at rising of clock
 	always @(posedge clk)
@@ -43,7 +51,7 @@ module leds_testbench();
 				errors = errors + 1;
 			end 
 			vectornum = vectornum + 1;
-			if(testvectors[vectornum] === 13'bx) begin
+			if(testvectors[vectornum] === 256'bx) begin
 				$display("%d tests completed with %d errors", vectornum, errors);
 				$stop;
 			end

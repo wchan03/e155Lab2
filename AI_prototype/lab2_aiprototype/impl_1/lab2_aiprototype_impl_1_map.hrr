@@ -1,0 +1,19 @@
+---------------------------------------------------
+Report for cell seven_segment_multiplexer
+   Instance path: seven_segment_multiplexer
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         20        100.0
+                               LUTGATE	         20        100.0
+                                 IOBUF	         24        100.0
+                                PFUREG	         15        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                 seven_segment_decoder	          1        35.0
+---------------------------------------------------
+Report for cell seven_segment_decoder
+   Instance path: seven_segment_multiplexer/decoder_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7        35.0
+                               LUTGATE	          7        35.0
